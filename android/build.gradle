@@ -9,6 +9,9 @@ buildscript {
     repositories {
         google()
         mavenCentral()
+        maven {
+            url "https://software.mobile.pendo.io/artifactory/androidx-release"
+        }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:7.2.1'
@@ -51,6 +54,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(':capacitor-android')
     implementation "androidx.appcompat:appcompat:$androidxAppCompatVersion"
+    api project(':pendolib')
     testImplementation "junit:junit:$junitVersion"
     androidTestImplementation "androidx.test.ext:junit:$androidxJunitVersion"
     androidTestImplementation "androidx.test.espresso:espresso-core:$androidxEspressoCoreVersion"

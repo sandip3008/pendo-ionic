@@ -9,6 +9,10 @@ const pendo = core.registerPlugin('pendo', {
 });
 
 class pendoWeb extends core.WebPlugin {
+    async startSession(options) {
+        console.log('refund: ', options);
+        return options;
+    }
     async echo(options) {
         console.log('ECHO', options);
         return options;

@@ -20,6 +20,22 @@
         "docs": "",
         "complexTypes": [],
         "slug": "echo"
+      },
+      {
+        "name": "startSession",
+        "signature": "(options: { visitorId: string; accountId: string; visitorData: string; accountData: string; }) => Promise<{ visitorId: string; accountId: string; visitorData: string; accountData: string; }>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "{ visitorId: string; accountId: string; visitorData: string; accountData: string; }"
+          }
+        ],
+        "returns": "Promise<{ visitorId: string; accountId: string; visitorData: string; accountData: string; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "startsession"
       }
     ],
     "properties": []
