@@ -1,5 +1,7 @@
 package com.rewaa.pendo;
 
+import android.util.Log;
+
 import com.getcapacitor.JSObject;
 import com.getcapacitor.Plugin;
 import com.getcapacitor.PluginCall;
@@ -27,6 +29,8 @@ public class pendoPlugin extends Plugin {
     public void startSession(PluginCall call) {
         String visitorId = call.getString("visitorId");
         String accountId = call.getString("accountId");
+        Log.e("startSession", "visitorId: "+ visitorId );
+        Log.e("startSession", "accountId: "+ accountId );
 //        String visitorData = call.getString("visitorData");
 //        String accountData = call.getString("accountData");
 
@@ -48,7 +52,7 @@ public class pendoPlugin extends Plugin {
         );
 
         JSObject ret = new JSObject();
-        ret.put("value", implementation.echo(visitorId));
+        ret.put("value", visitorId);
         call.resolve(ret);
     }
 
